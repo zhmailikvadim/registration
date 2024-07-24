@@ -1,7 +1,38 @@
 <mvc:View controllerName="registration.controller.ViewMain"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+    xmlns:tnt="sap.tnt"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+        <l:VerticalLayout class="sapUiContentPadding" width="100%">
+            <Text id='Txt' text="{i18n>text}" />
+            <Text id='Txt2' text="{i18n>text2}" />
+            <Text id='Txt3' text="{i18n>text3}" />
+            <Text id='Txt4' text="{i18n>text4}" />
+            <Text id='Txt5' text="{i18n>text5}" class="TextStyle" />
+            <FlexBox
+				height="50px"
+				alignItems="Center"
+				justifyContent="Start">
+                <Label id='NameL' 	text="Имя       "/>
+                <Input id="NameI" editable="true" > </Input>
+            </FlexBox>
+            <FlexBox
+				height="50px"
+				alignItems="Center"
+				justifyContent="Start">
+                <Label id='OtL' 	text="Отчество       "/>
+                <Input id="OtI" editable="true" > </Input>
+            </FlexBox>
+            <FlexBox
+				height="50px"
+				alignItems="Center"
+				justifyContent="Start">
+                <Label id='FamL' 	text="Фамилия       "/>
+                <Input id="FamI" editable="true" > </Input>
+            </FlexBox>
+        </l:VerticalLayout>
         <content />
     </Page>
 </mvc:View>
