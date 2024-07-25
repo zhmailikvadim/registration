@@ -1,4 +1,16 @@
 /* Enter your custom styles here */
 .TextStyle {
     font-weight: 700;
+    margin-left: 0%;
 }
+
+.margin{
+    margin-left: 0%;
+}
+
+.col{
+   color: #ff0000;
+   font-style: italic;
+   margin-left: 0%;
+}
+
