@@ -17,16 +17,40 @@ sap.ui.define([
                 var viewModel = new sap.ui.model.json.JSONModel(viewProperties);
                 this.getView().setModel(viewModel, "viewModel");
 
-                var oModelData = new sap.ui.model.odata.v2.ODataModel({
-                    headers: {
-                        "myHeader1" : "value1",
-                        "myHeader2" : "value2"
-                } })
+                var sServiceUrl = "https://sapbpc-dev.beloil.by/sap/opu/odata/sap/zhr_c_candidateheader_cds/?sap-client=400"
+                var oMainModel = new sap.ui.model.odata.ODataModel(sServiceUrl,true);
+                var oJsonMainModel = new sap.ui.model.json.JSONModel();
             },
 
             
 
             onButtonPress: function() {
+                var oModel = this.getView().getModel();
+                var oEntry = {};
+                oEntry.IsActiveEntity = "true"
+                oEntry.vorna = this.getView().byId("vorna").getValue();
+                oEntry.nachn = this.getView().byId("nachn").getValue();
+                oEntry.nach2 = this.getView().byId("nach2").getValue();
+
+                oModel.update("/ZHR_C_CANDIDATEHEADER", oEntry, {
+                    method: "POST",
+                    success: function(data) {
+                     alert("success");
+                    },
+                    error: function(e) {
+                     alert("error");
+                    }
+                   });
+
+                oModel.update("/ZHR_C_CANDIDATEHEADER", oEntry, {
+                    method: "POST",
+                    success: function(data) {
+                     alert("success");
+                    },
+                    error: function(e) {
+                     alert("error");
+                    }
+                   });
 
 
             },

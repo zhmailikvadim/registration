@@ -25,11 +25,11 @@
                         <Label id='lab10' text="" />
                         <Text id='txt10' text="ФИО" textAlign="Begin" class="TextStyle"  />
                         <Label id='lab1' text="Имя" />
-                        <Input id='inp1' value=" " />
+                        <Input id='vorna' value=" " />
                         <Label id='lab2' text="Отчество" />
-                        <Input id='inp2' value=" " />
+                        <Input id='nach2' value=" " />
                         <Label id='lab3' text="Фамилия" />
-                        <Input id='inp3' value=" " />
+                        <Input id='nachn' value=" " />
                         <Label id='lab4' text="Табельный номер" />
                         <Input id='inp4' value="00000000" />
                         <Label id='lab6' text="" />
@@ -46,13 +46,13 @@
                         <Label id='lab11' text="" />
                         <Text id='txt4' text="{i18n>data_pers}" textAlign="Begin" class="TextStyle"  />
                         <Label id='lab9' text="{i18n>text5}" />
-                        <Input id='inp11' value="" />
+                        <Input id='login' value="" />
                         <Label id='lab12' text=" "/>
                         <Text id='txt12' text="{i18n>text6}" textAlign="Begin" class="col"  />
                         <Label id='lab13' text="{i18n>password}" />
                         <Input id='inp13' value="" />
                         <Label id='lab14' text="{i18n>repeat_password}" />
-                        <Input id='inp14' value="" />
+                        <Input id='inp14' value="{oMainModel}" />
                         <Label id='lab15' text="{i18n>mail}" />
                         <Input id='inp15' value="" />
                         <Label id='lab16' text=" "/>
