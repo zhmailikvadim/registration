@@ -17,7 +17,11 @@ sap.ui.define([
                 var viewModel = new sap.ui.model.json.JSONModel(viewProperties);
                 this.getView().setModel(viewModel, "viewModel");
 
-            
+                var oModelData = new sap.ui.model.odata.v2.ODataModel({
+                    headers: {
+                        "myHeader1" : "value1",
+                        "myHeader2" : "value2"
+                } })
             },
 
             
