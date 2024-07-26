@@ -17,43 +17,45 @@ sap.ui.define([
                 var viewModel = new sap.ui.model.json.JSONModel(viewProperties);
                 this.getView().setModel(viewModel, "viewModel");
 
-               
+
             },
 
-           
 
 
-            
 
-            onButtonPress: function() {
-                var oModel = this.getView().getModel();
-                var oEntry = {};
-                oEntry.IsActiveEntity = "true"
-                oEntry.vorna = this.getView().byId("vorna").getValue();
-                oEntry.nachn = this.getView().byId("nachn").getValue();
-                oEntry.nach2 = this.getView().byId("nach2").getValue();
-                oModel.setTokenHandlingEnabled(true);
-                var scsrfSecToken = oModel.getSecurityToken(); 
-                var metadata = oModel.getMetaModel(); 
-                console.log("Token:", scsrfSecToken);
-                console.log("Metadata:", metadata);
+
+
+            onButtonPress: function () {
+
+                /*                var nachn = this.getView().byId("").getValue();
+                                var login = this.getView().byId("login").getValue();
+                                var password = this.getView().byId("password").getValue();
+                                var repeat_password = this.getView().byId("repeat_password").getValue();
+                                var mail = this.getView().byId("mail").getValue();
+                                var repeat_mail = this.getView().byId("repeat_mail").getValue();
                 
-                const myHeaders = new Headers();
-                myHeaders.append("X-CSRF-Token", scsrfSecToken);
-                myHeaders.append("Content-Type", "application/json");
+                                if (nachn == " " || login == " " || password == " " || repeat_password == " " || mail == " " || repeat_mail == " ") {
+                                    alert("Заполните обязательные поля")
+                                    return;
+                                }*/
 
-                oModel.update("/ZHR_C_CANDIDATE_REGS", oEntry, {
-                    method: "POST",
-                    headers:myHeaders,
-                    redirect: "follow",
-                    success: function(data) {
-                     alert("success");
-                    },
-                    error: function(e) {
-                     alert("error");
-                    }
-                   });
+
+
+                var oModel = this.getView().getModel();
+                oModel.setTokenHandlingEnabled(true);
+                var oContext = oModel.createEntry("/ZHR_C_CANDIDATE_REGS", {
+                    properties: {
+                        vorna: this.getView().byId("vorna").getValue(),
+                        nachn: this.getView().byId("nachn").getValue(), 
+                    }                   
+                });
+                oModel.submitChanges( );
+                oContext.created().then(
+                    function () { alert("success") },
+                    function () { alert("error") }
+                  )
             },
+
 
             onParentClicked: function (oEvent) {
                 var bSelected = oEvent.getParameter("selected");
@@ -61,8 +63,8 @@ sap.ui.define([
 
                     this.getView().getModel("viewModel").setProperty("/bEnableUpdate", true);
                 }
-                else { 
-                    this.getView().getModel("viewModel").setProperty("/bEnableUpdate", false); 
+                else {
+                    this.getView().getModel("viewModel").setProperty("/bEnableUpdate", false);
                 }
             }
 
