@@ -17,13 +17,7 @@ sap.ui.define([
                 var viewModel = new sap.ui.model.json.JSONModel(viewProperties);
                 this.getView().setModel(viewModel, "viewModel");
 
-<<<<<<< HEAD
                
-=======
-                var sServiceUrl = "https://sapbpc-dev.beloil.by/sap/opu/odata/sap/zhr_c_candidateheader_cds/?sap-client=400"
-                var oMainModel = new sap.ui.model.odata.ODataModel(sServiceUrl,true);
-                var oJsonMainModel = new sap.ui.model.json.JSONModel();
->>>>>>> a01b4603a53b05ed34fc8d165434c9fe68d971d3
             },
 
            
@@ -32,22 +26,6 @@ sap.ui.define([
             
 
             onButtonPress: function() {
-<<<<<<< HEAD
-             
-               var nachn =  this.getView().byId("inp3").getValue(); 
-               var login =  this.getView().byId("login").getValue();
-               var password =  this.getView().byId("password").getValue();
-               var repeat_password =  this.getView().byId("repeat_password").getValue();
-               var mail =  this.getView().byId("mail").getValue();
-               var repeat_mail =  this.getView().byId("repeat_mail").getValue();
-
-               if ( nachn == " " || login == " " || password == " " || repeat_password == " " || mail == " " || repeat_mail == " " ) {
-                  alert("Заполните обязательные поля")
-                  return;
-               }
-               
-
-=======
                 var oModel = this.getView().getModel();
                 var oEntry = {};
                 oEntry.IsActiveEntity = "true"
@@ -57,11 +35,17 @@ sap.ui.define([
                 oModel.setTokenHandlingEnabled(true);
                 var scsrfSecToken = oModel.getSecurityToken(); 
                 var metadata = oModel.getMetaModel(); 
-                console.log(metadata);
-                console.log(scsrfSecToken);
+                console.log("Token:", scsrfSecToken);
+                console.log("Metadata:", metadata);
+                
+                const myHeaders = new Headers();
+                myHeaders.append("X-CSRF-Token", scsrfSecToken);
+                myHeaders.append("Content-Type", "application/json");
 
                 oModel.update("/ZHR_C_CANDIDATE_REGS", oEntry, {
                     method: "POST",
+                    headers:myHeaders,
+                    redirect: "follow",
                     success: function(data) {
                      alert("success");
                     },
@@ -69,9 +53,7 @@ sap.ui.define([
                      alert("error");
                     }
                    });
->>>>>>> a01b4603a53b05ed34fc8d165434c9fe68d971d3
             },
-
 
             onParentClicked: function (oEvent) {
                 var bSelected = oEvent.getParameter("selected");
