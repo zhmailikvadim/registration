@@ -31,8 +31,13 @@ sap.ui.define([
                 oEntry.vorna = this.getView().byId("vorna").getValue();
                 oEntry.nachn = this.getView().byId("nachn").getValue();
                 oEntry.nach2 = this.getView().byId("nach2").getValue();
+                oModel.setTokenHandlingEnabled(true);
+                var scsrfSecToken = oModel.getSecurityToken(); 
+                var metadata = oModel.getMetaModel(); 
+                console.log(metadata);
+                console.log(scsrfSecToken);
 
-                oModel.update("/ZHR_C_CANDIDATEHEADER", oEntry, {
+                oModel.update("/ZHR_C_CANDIDATE_REGS", oEntry, {
                     method: "POST",
                     success: function(data) {
                      alert("success");
@@ -41,18 +46,6 @@ sap.ui.define([
                      alert("error");
                     }
                    });
-
-                oModel.update("/ZHR_C_CANDIDATEHEADER", oEntry, {
-                    method: "POST",
-                    success: function(data) {
-                     alert("success");
-                    },
-                    error: function(e) {
-                     alert("error");
-                    }
-                   });
-
-
             },
 
 
