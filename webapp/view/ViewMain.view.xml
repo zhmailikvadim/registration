@@ -31,7 +31,7 @@
                         <Label id='lab3' text="Фамилия" required="true"/>
                         <Input id='nachn' value=" " />
                         <Label id='lab4' text="Табельный номер" />
-                        <Input id='inp4' value="00000000" />
+                        <Input id='tabel' value="00000000" />
                         <Label id='lab6' text="" />
                         <Text id='txt1' text="{i18n>pernr}"   />
                         <Label id='lab7' text="" />

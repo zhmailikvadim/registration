@@ -46,19 +46,24 @@ sap.ui.define([
                 var oContext = oModel.createEntry("/ZHR_C_CANDIDATE_REGS", {
                     properties: {
                         vorna: this.getView().byId("vorna").getValue(),
-                        nachn: this.getView().byId("nachn").getValue(), 
-                    }                   
+                        nachn: this.getView().byId("nachn").getValue(),
+                        nach2: this.getView().byId("nachn2").getValue(),
+                        pernr: this.getView().byId("tabel").getValue(), 
+                        useralias: this.getView().byId("login").getValue(), 
+                        password: this.getView().byId("password").getValue(), 
+                        num01_email: this.getView().byId("mail").getValue(), 
+                    
+                    }
                 });
-                oModel.submitChanges( );
+                oModel.submitChanges();
                 oContext.created().then(
-                    function () { alert("Вы зарегистрированы. Данные отправлены на e-mail!") 
-
+                    function () {
+                        alert("Вы зарегистрированы. Данные отправлены на e-mail!")
                         window.open("https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
-
 
                     },
                     function () { alert("Ошибка регистрации") }
-                  )
+                )
             },
 
 
