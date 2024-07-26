@@ -17,7 +17,13 @@ sap.ui.define([
                 var viewModel = new sap.ui.model.json.JSONModel(viewProperties);
                 this.getView().setModel(viewModel, "viewModel");
 
+<<<<<<< HEAD
                
+=======
+                var sServiceUrl = "https://sapbpc-dev.beloil.by/sap/opu/odata/sap/zhr_c_candidateheader_cds/?sap-client=400"
+                var oMainModel = new sap.ui.model.odata.ODataModel(sServiceUrl,true);
+                var oJsonMainModel = new sap.ui.model.json.JSONModel();
+>>>>>>> a01b4603a53b05ed34fc8d165434c9fe68d971d3
             },
 
            
@@ -26,6 +32,7 @@ sap.ui.define([
             
 
             onButtonPress: function() {
+<<<<<<< HEAD
              
                var nachn =  this.getView().byId("inp3").getValue(); 
                var login =  this.getView().byId("login").getValue();
@@ -40,6 +47,29 @@ sap.ui.define([
                }
                
 
+=======
+                var oModel = this.getView().getModel();
+                var oEntry = {};
+                oEntry.IsActiveEntity = "true"
+                oEntry.vorna = this.getView().byId("vorna").getValue();
+                oEntry.nachn = this.getView().byId("nachn").getValue();
+                oEntry.nach2 = this.getView().byId("nach2").getValue();
+                oModel.setTokenHandlingEnabled(true);
+                var scsrfSecToken = oModel.getSecurityToken(); 
+                var metadata = oModel.getMetaModel(); 
+                console.log(metadata);
+                console.log(scsrfSecToken);
+
+                oModel.update("/ZHR_C_CANDIDATE_REGS", oEntry, {
+                    method: "POST",
+                    success: function(data) {
+                     alert("success");
+                    },
+                    error: function(e) {
+                     alert("error");
+                    }
+                   });
+>>>>>>> a01b4603a53b05ed34fc8d165434c9fe68d971d3
             },
 
 
