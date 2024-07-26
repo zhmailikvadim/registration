@@ -11,6 +11,11 @@
 .col{
    color: #ff0000;
    font-style: italic;
-   margin-left: 0%;
+ 
+}
+
+.disp{
+    margin-left: 0%;
+    right: 47%;
 }
 

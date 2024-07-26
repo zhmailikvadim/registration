@@ -17,17 +17,28 @@ sap.ui.define([
                 var viewModel = new sap.ui.model.json.JSONModel(viewProperties);
                 this.getView().setModel(viewModel, "viewModel");
 
-                var oModelData = new sap.ui.model.odata.v2.ODataModel({
-                    headers: {
-                        "myHeader1" : "value1",
-                        "myHeader2" : "value2"
-                } })
+               
             },
+
+           
+
 
             
 
             onButtonPress: function() {
+             
+               var nachn =  this.getView().byId("inp3").getValue(); 
+               var login =  this.getView().byId("login").getValue();
+               var password =  this.getView().byId("password").getValue();
+               var repeat_password =  this.getView().byId("repeat_password").getValue();
+               var mail =  this.getView().byId("mail").getValue();
+               var repeat_mail =  this.getView().byId("repeat_mail").getValue();
 
+               if ( nachn == " " || login == " " || password == " " || repeat_password == " " || mail == " " || repeat_mail == " " ) {
+                  alert("Заполните обязательные поля")
+                  return;
+               }
+               
 
             },
 

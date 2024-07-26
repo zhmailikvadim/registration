@@ -28,7 +28,7 @@
                         <Input id='inp1' value=" " />
                         <Label id='lab2' text="Отчество" />
                         <Input id='inp2' value=" " />
-                        <Label id='lab3' text="Фамилия" />
+                        <Label id='lab3' text="Фамилия" required="true"/>
                         <Input id='inp3' value=" " />
                         <Label id='lab4' text="Табельный номер" />
                         <Input id='inp4' value="00000000" />
@@ -45,20 +45,27 @@
                     <form:content>
                         <Label id='lab11' text="" />
                         <Text id='txt4' text="{i18n>data_pers}" textAlign="Begin" class="TextStyle"  />
-                        <Label id='lab9' text="{i18n>text5}" />
-                        <Input id='inp11' value="" />
+                        <Label id='lab9' text="{i18n>text5}" required="true"/>
+                        <Input id='login' value="" />
                         <Label id='lab12' text=" "/>
-                        <Text id='txt12' text="{i18n>text6}" textAlign="Begin" class="col"  />
-                        <Label id='lab13' text="{i18n>password}" />
-                        <Input id='inp13' value="" />
-                        <Label id='lab14' text="{i18n>repeat_password}" />
-                        <Input id='inp14' value="" />
-                        <Label id='lab15' text="{i18n>mail}" />
-                        <Input id='inp15' value="" />
+
+                        <Label id='iconlab' text=" " />
+                        <core:Icon id='icon'
+			                src="sap-icon://syringe"
+			                color="#031E48" class = "disp">
+                           
+                        </core:Icon>
+                        <Text id='txt12' text="{i18n>text6}" textAlign="Begin" class="col" 	 />
+                        <Label id='lab13' text="{i18n>password}" required="true"/>
+                        <Input id='password' value="" />
+                        <Label id='lab14' text="{i18n>repeat_password}" required="true"/>
+                        <Input id='repeat_password' value="" />
+                        <Label id='lab15' text="{i18n>mail}" required="true"/>
+                        <Input id='mail' value="" />
                         <Label id='lab16' text=" "/>
                         <Text id='txt16' text="{i18n>help_mail}" textAlign="Begin" class="col"  />
-                        <Label id='lab17' text="{i18n>repeat_mail}" />
-                        <Input id='inp17' value="" />
+                        <Label id='lab17' text="{i18n>repeat_mail}" required="true"/>
+                        <Input id='repeat_mail' value="" />
                     </form:content>
                 </form:SimpleForm>
                 <form:SimpleForm id='fid4' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true"
