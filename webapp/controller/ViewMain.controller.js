@@ -51,8 +51,13 @@ sap.ui.define([
                 });
                 oModel.submitChanges( );
                 oContext.created().then(
-                    function () { alert("success") },
-                    function () { alert("error") }
+                    function () { alert("Вы зарегистрированы. Данные отправлены на e-mail!") 
+
+                        window.open("https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home", '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+
+
+                    },
+                    function () { alert("Ошибка регистрации") }
                   )
             },
 
