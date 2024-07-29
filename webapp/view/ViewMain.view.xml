@@ -49,12 +49,6 @@
                         <Input id='login' value="" />
                         <Label id='lab12' text=" "/>
 
-                        <Label id='iconlab' text=" " />
-                        <core:Icon id='icon'
-			                src="sap-icon://syringe"
-			                color="#031E48" class = "disp">
-                           
-                        </core:Icon>
                         <Text id='txt12' text="{i18n>text6}" textAlign="Begin" class="col" 	 />
                         <Label id='lab13' text="{i18n>password}" required="true"/>
                         <Input id='password' value="" />

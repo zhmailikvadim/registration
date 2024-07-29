@@ -20,26 +20,29 @@ sap.ui.define([
 
             },
 
-
-
-
-
-
             onButtonPress: function () {
-
-                /*                var nachn = this.getView().byId("").getValue();
-                                var login = this.getView().byId("login").getValue();
-                                var password = this.getView().byId("password").getValue();
-                                var repeat_password = this.getView().byId("repeat_password").getValue();
-                                var mail = this.getView().byId("mail").getValue();
-                                var repeat_mail = this.getView().byId("repeat_mail").getValue();
-                
-                                if (nachn == " " || login == " " || password == " " || repeat_password == " " || mail == " " || repeat_mail == " ") {
-                                    alert("Заполните обязательные поля")
-                                    return;
-                                }*/
+                var nachn = this.getView().byId("nachn").getValue();
+                var login = this.getView().byId("login").getValue();
+                var password = this.getView().byId("password").getValue();
+                var repeat_password = this.getView().byId("repeat_password").getValue();
+                var mail = this.getView().byId("mail").getValue();
+                var repeat_mail = this.getView().byId("repeat_mail").getValue();
 
 
+                if ( password != repeat_password  ) {
+                    alert("Пароли не совпадают")
+                    return;
+                }
+
+                if (  mail != repeat_mail ) {
+                    alert("Почта не совпадает")
+                    return;
+                }
+
+                if (nachn == "" || login == "" || password == "" || repeat_password == "" || mail == "" || repeat_mail == "") {
+                    alert("Заполните обязательные поля")
+                    return;
+                }
 
                 var oModel = this.getView().getModel();
                 oModel.setTokenHandlingEnabled(true);
@@ -48,11 +51,11 @@ sap.ui.define([
                         vorna: this.getView().byId("vorna").getValue(),
                         nachn: this.getView().byId("nachn").getValue(),
                         nach2: this.getView().byId("nachn2").getValue(),
-                        pernr: this.getView().byId("tabel").getValue(), 
-                        useralias: this.getView().byId("login").getValue(), 
-                        password: this.getView().byId("password").getValue(), 
-                        num01_email: this.getView().byId("mail").getValue(), 
-                    
+                        pernr: this.getView().byId("tabel").getValue(),
+                        useralias: this.getView().byId("login").getValue(),
+                        password: this.getView().byId("password").getValue(),
+                        num01_email: this.getView().byId("mail").getValue(),
+
                     }
                 });
                 oModel.submitChanges();
