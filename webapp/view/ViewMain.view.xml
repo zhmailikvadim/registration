@@ -72,7 +72,7 @@
                         <Label id='lab22' text="" />
                         <Text id='txt22' text="{i18n>comment}" textAlign="Begin" class="col"  />
                         <Label id='lab23' text="" />
-                        <Link id='link1' text="{i18n>agree}" />
+                        <Link id='link1' text="{i18n>agree}" href="https://belsap.com/sogl.pdf"/>
                         <Label id='lab24' text="" />
                         <Text id='txt24' text="{i18n>garant}" textAlign="Begin"   />
                         <Label id='lab25' text="" />
