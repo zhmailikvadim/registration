@@ -6,6 +6,7 @@ sap.ui.define(
   function (Controller, MessageBox, MessageToast) {
     'use strict';
     let candidateEntity = '/ZHR_C_CANDIDATE_REGS';
+    let logEntity = '/zhr_c_recruitment_log';
     return Controller.extend('registration.controller.ViewMain', {
       onInit: function () {
         var viewProperties = {
@@ -21,7 +22,26 @@ sap.ui.define(
           MessageToast.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
           var new_window = window.open('https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home', '_blank');
         } else {
-          MessageBox.error('Ошибка регистрации. \r\n Проверьте пожалуйста данные!');
+          
+          /////////////
+          let oModelLog = this.getView().getModel();
+          var filters1 = new Array();
+        //  filters1.push(new sap.ui.model.Filter('Active', sap.ui.model.FilterOperator.EQ, 'true'));
+          filters1.push(new sap.ui.model.Filter('IsActiveEntity', sap.ui.model.FilterOperator.EQ, 'false'));
+          oModelLog.read(candidateEntity, {
+            filters: filters1,
+            urlParameters: { "$expand": "to_RecruitmentLog" },
+            success: function(data, response) { 
+              console.log(response),
+              console.log(data),
+              MessageBox.error('Ошибка регистрации. \r\n Проверьте пожалуйста данные!'); 
+            },
+          });
+
+          ///////////
+        //  MessageBox.error('Ошибка регистрации. \r\n Проверьте пожалуйста данные!');
+       
+
         }
       },
 
