@@ -9,11 +9,13 @@
     "sapui5"
   ],
   "main": "webapp/index.html",
-  "dependencies": {},
+  "dependencies": {
+    "chromedriver": "^127.0.1"
+  },
   "devDependencies": {
-    "@ui5/cli": "^3.0.0",
+    "@sap-ux/ui5-middleware-fe-mockserver": "2",
     "@sap/ux-ui5-tooling": "1",
-    "@sap-ux/ui5-middleware-fe-mockserver": "2"
+    "@ui5/cli": "^3.0.0"
   },
   "scripts": {
     "start": "fiori run --open \"test/flpSandbox.html?sap-client=400&sap-ui-xx-viewCache=false#registration-display\"",

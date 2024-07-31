@@ -16,6 +16,15 @@ sap.ui.define(
         this.getView().setModel(viewModel, 'viewModel');
       },
 
+      onAnyError: function (oData) {
+        if (oData.results.length != 0) {
+          MessageToast.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
+          var new_window = window.open('https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home', '_blank');
+        } else {
+          MessageBox.error('Ошибка регистрации. \r\n Проверьте пожалуйста данные!');
+        }
+      },
+
       onSuccessRecordAdded: function () {
         let oModel = this.getView().getModel();
         let oView = this.getView();
@@ -26,20 +35,7 @@ sap.ui.define(
         filters.push(new sap.ui.model.Filter('zsap_user', sap.ui.model.FilterOperator.GT, ''));
         oModel.read(candidateEntity, {
           filters: filters,
-          success: (oData) => {
-            if (oData.results.length != 0) {
-              MessageToast.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
-              var new_window = window.open(
-                'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home',
-                '_blank',
-              );
-              new_window.onload = function () {
-                new_window.document.getElementById('USERNAME_FIELD-inner').innerHTML = '111111';
-              };
-            } else {
-              MessageBox.error('Ошибка регистрации. \r\n Проверьте пожалуйста данные!');
-            }
-          },
+          success: this.onAnyError.bind(this),
           error: (oError) => MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' }),
         });
       },
@@ -47,7 +43,7 @@ sap.ui.define(
       onSapLogonPress: function () {
         var new_window = window.open('https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html', '_blank');
         new_window.onload = function () {
-          new_window.document.getElementById('USERNAME_FIELD-inner').innerHTML = '111111';
+          new_window.document.getElementById('USERNAME_FIELD-inner').value = '111111';
           const inputElement = new_window.document.querySelector('#USERNAME_FIELD-inner');
           inputElement.value = '111111';
         };
