@@ -18,16 +18,17 @@ sap.ui.define(
       },
 
       onAnyError: function (oData) {
-        if (oData.results.length != 0) {
-          MessageToast.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
+        if (oData.results.length > 0) {
+       /*   MessageToast.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
           var new_window = window.open('https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home', '_blank');
-        } else {
+        } else {*/
           
           /////////////
           let oModelLog = this.getView().getModel();
           var filters1 = new Array();
         //  filters1.push(new sap.ui.model.Filter('Active', sap.ui.model.FilterOperator.EQ, 'true'));
           filters1.push(new sap.ui.model.Filter('IsActiveEntity', sap.ui.model.FilterOperator.EQ, 'false'));
+          filters1.push(new sap.ui.model.Filter('uuid', sap.ui.model.FilterOperator.EQ, oData.results[ 0 ].uuid));
           oModelLog.read(candidateEntity, {
             filters: filters1,
             urlParameters: { "$expand": "to_RecruitmentLog" },
@@ -52,7 +53,7 @@ sap.ui.define(
         var filters = new Array();
         filters.push(new sap.ui.model.Filter('IsActiveEntity', sap.ui.model.FilterOperator.EQ, 'false'));
         filters.push(new sap.ui.model.Filter('num01_email', sap.ui.model.FilterOperator.EQ, oView.byId('mail').getValue()));
-        filters.push(new sap.ui.model.Filter('zsap_user', sap.ui.model.FilterOperator.GT, ''));
+        //filters.push(new sap.ui.model.Filter('zsap_user', sap.ui.model.FilterOperator.GT, ''));
         oModel.read(candidateEntity, {
           filters: filters,
           success: this.onAnyError.bind(this),
