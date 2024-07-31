@@ -41,7 +41,7 @@ sap.ui.define(
       },
 
       onSapLogonPress: function () {
-        var new_window = window.open('https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html', '_blank');
+        var new_window = window.open('https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#EnvironmentalData-explore', '_blank');
         new_window.onload = function () {
           new_window.document.getElementById('USERNAME_FIELD-inner').value = '111111';
           const inputElement = new_window.document.querySelector('#USERNAME_FIELD-inner');
