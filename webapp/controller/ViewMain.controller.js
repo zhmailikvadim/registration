@@ -26,7 +26,7 @@ sap.ui.define(
             filters1.push(new sap.ui.model.Filter('uuid', sap.ui.model.FilterOperator.EQ, oData.results[0].uuid));
             oModelLog.read(candidateEntity, {
               filters: filters1,
-              urlParameters: { $expand: 'to_RecruitmentLog' },
+              urlParameters: { $expand: 'to_RecruitmentLog' }, 
               success: function (data, response) {
                 console.log(response),
                   console.log(data),
