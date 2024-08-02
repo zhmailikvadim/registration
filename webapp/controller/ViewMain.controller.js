@@ -34,10 +34,11 @@ sap.ui.define(
               },
             });
           } else {
-            MessageToast.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
+            MessageBox.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
             var new_window = window.open(
-              'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#Shell-home',
+              'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/sap/zhr_cand_recrui/index.html?sap-client=400&sap-ui-language=RU',
               '_blank',
+              
             );
           }
         }
