@@ -28,7 +28,6 @@
                 }
             },
             "mainService_Annotation": {
-                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZHR_C_CANDIDATE_REGS_CDS_VAN',Version='0001')/$value/",
                 "type": "ODataAnnotation",
                 "settings": {
                     "localUri": "localService/mainService_Annotation.xml"

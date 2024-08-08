@@ -26,7 +26,7 @@ sap.ui.define(
             filters1.push(new sap.ui.model.Filter('uuid', sap.ui.model.FilterOperator.EQ, oData.results[0].uuid));
             oModelLog.read(candidateEntity, {
               filters: filters1,
-              urlParameters: { $expand: 'to_RecruitmentLog' }, 
+              urlParameters: { $expand: 'to_RecruitmentLog' },
               success: function (data, response) {
                 console.log(response),
                   console.log(data),
@@ -34,12 +34,11 @@ sap.ui.define(
               },
             });
           } else {
-            MessageBox.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
-            var new_window = window.open(
-              'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/sap/zhr_cand_recrui/index.html?sap-client=400&sap-ui-language=RU',
+            window.open(
+              'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/?sap-client=400&sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage',
               '_blank',
-              
             );
+            MessageBox.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
           }
         }
       },
@@ -55,13 +54,14 @@ sap.ui.define(
         oModel.read(candidateEntity, {
           filters: filters,
           success: this.onAnyError.bind(this),
-          error: (oError) => MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' }),
+          error: oView.setBusy(false),
+          // error: (oError) => MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' }),
         });
       },
 
       onSapLogonPress: function () {
         var new_window = window.open(
-          'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html#EnvironmentalData-explore',
+          'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/?sap-client=400&sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage',
           '_blank',
         );
         new_window.onload = function () {
@@ -88,12 +88,13 @@ sap.ui.define(
             useralias: oView.byId('login').getValue(),
             password: oView.byId('password').getValue(),
             num01_email: oView.byId('mail').getValue(),
+            is_run_registration: true,
           },
         });
         oModel.submitChanges({
           success: this.onSuccessRecordAdded.bind(this),
           error: (oError) => {
-            MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' });
+            // MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' });
             oView.setBusy(false);
           },
         });
@@ -123,7 +124,6 @@ sap.ui.define(
         }
 
         var oModel = this.getView().getModel();
-        oModel.setTokenHandlingEnabled(true);
         var filters = new Array();
         filters.push(new sap.ui.model.Filter('IsActiveEntity', sap.ui.model.FilterOperator.EQ, 'false'));
         filters.push(new sap.ui.model.Filter('has_errors', sap.ui.model.FilterOperator.EQ, 'false'));

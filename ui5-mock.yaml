@@ -36,6 +36,4 @@ server:
             metadataPath: ./webapp/localService/metadata.xml
             mockdataPath: ./webapp/localService/mockdata
             generateMockData: true
-        annotations:
-          - localPath: ./webapp/localService/mainService_Annotation.xml
-            urlPath: /sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZHR_C_CANDIDATE_REGS_CDS_VAN',Version='0001')/$value/
+        annotations: []

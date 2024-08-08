@@ -66,139 +66,70 @@
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/ActiveUUID">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/ActiveUUID">
                 <Annotation Term="UI.HiddenFilter"/>
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/HasActiveEntity">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/HasActiveEntity">
                 <Annotation Term="UI.HiddenFilter"/>
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/HasDraftEntity">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/HasDraftEntity">
                 <Annotation Term="UI.HiddenFilter"/>
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/IsActiveEntity">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/IsActiveEntity">
                 <Annotation Term="UI.HiddenFilter"/>
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/DraftEntityCreationDateTime">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/DraftEntityCreationDateTime">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/DraftEntityLastChangeDateTime">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/DraftEntityLastChangeDateTime">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/Activation_ac">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/Activation_ac">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/Edit_ac">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/Edit_ac">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/Preparation_ac">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/Preparation_ac">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/Validation_ac">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/Validation_ac">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_COMPUTER_LEVEL_VHType/Id">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_COMPUTER_LEVEL_VHType">
-                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_EDUC_TYPE_VHType/ID">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_EDUC_TYPE_VHType">
-                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_FAMILY_STAT_VHType/id">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_FAMILY_STAT_VHType">
-                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/ActiveUUID">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/HasActiveEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/HasDraftEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/IsActiveEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/DraftEntityCreationDateTime">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/DraftEntityLastChangeDateTime">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/Activation_ac">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/Edit_ac">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/Preparation_ac">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/Validation_ac">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/detail_sickness">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/detail_sickness">
                 <Annotation Term="UI.MultiLineText"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/relatives_bn">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/relatives_bn">
                 <Annotation Term="UI.MultiLineText"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/admin_respons_text">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/admin_respons_text">
                 <Annotation Term="UI.MultiLineText"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/crimin_respons_text">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/crimin_respons_text">
                 <Annotation Term="UI.MultiLineText"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/hobbies">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/hobbies">
                 <Annotation Term="UI.MultiLineText"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/family_stat_id">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/family_stat_id">
                 <Annotation Term="UI.MultiLineText"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType/comp_level">
-                <Annotation Term="Common.Text" Path="to_ComputerLevelVH/Description">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_candidateheaderType">
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/comp_level"/>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType">
                 <Annotation Term="UI.DataPoint" Qualifier="nachn">
                     <Record>
                         <PropertyValue Property="Value" Path="nachn"/>
@@ -481,6 +412,17 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Личные данные"/>
+                        <PropertyValue Property="TypeNamePlural" String="Личные данные"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Личные данные"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
@@ -510,10 +452,6 @@
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="perid"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="num02_phone1"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
@@ -526,170 +464,73 @@
                             <PropertyValue Property="Value" Path="num01_email"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="comp_level"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="comp_programs"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ort01"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="state"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="stras"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="hsnmr"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="ort01f"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="statef"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="strasf"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="hsnmrf"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Вид Образования"/>
-                            <PropertyValue Property="Value" Path="education_type"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Вид Образования"/>
-                            <PropertyValue Property="Value" Path="educ_type_numc"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Наличие автомобиля"/>
-                            <PropertyValue Property="Value" Path="is_car_exist"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Наличие водительского удостоверения"/>
-                            <PropertyValue Property="Value" Path="is_driver"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Служба в Вооруженных Силах"/>
-                            <PropertyValue Property="Value" Path="is_arm_force"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Причина не прохождения службы"/>
-                            <PropertyValue Property="Value" Path="arm_reason"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="sickness"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="min_salary"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="detail_sickness"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="relatives_bn"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="objid"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="otype"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="plvar"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="zsap_user"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="zhr_user"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="password"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="useralias"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="created_data"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="created_user"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="created_time"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="admin_respons"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="changed_data"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="admin_respons_text"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="changed_user"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="crimin_respons"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="changed_time"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="crimin_respons_text"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="hobbies"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="family_stat_id"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
-                        </Record>
                     </Collection>
                 </Annotation>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/ActiveUUID">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/HasActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/HasDraftEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/IsActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/DraftEntityCreationDateTime">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/DraftEntityLastChangeDateTime">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/Activation_ac">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/Edit_ac">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/Preparation_ac">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATE_REGSType/Validation_ac">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_COMPUTER_LEVEL_VHType/Id">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_COMPUTER_LEVEL_VHType">
+                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_EDUC_TYPE_VHType/ID">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_EDUC_TYPE_VHType">
+                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_FAMILY_STAT_VHType/id">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_FAMILY_STAT_VHType">
+                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.zhr_c_recruitment_logType/ActiveUUID">
                 <Annotation Term="UI.HiddenFilter"/>
