@@ -86,6 +86,22 @@
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/land1">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/state">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/land1f">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/statef">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
             <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/DraftEntityCreationDateTime">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
@@ -129,6 +145,8 @@
                 <Annotation Term="UI.MultiLineText"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/comp_level"/>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/business_trip"/>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType/business_trip_sever_id"/>
             <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_C_CANDIDATEHEADERType">
                 <Annotation Term="UI.DataPoint" Qualifier="nachn">
                     <Record>
@@ -153,10 +171,19 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="ort01"/>
+                                    <PropertyValue Property="Value" Path="landx"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="land1"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="state_name"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="state"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ort01"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="stras"/>
@@ -173,10 +200,19 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="ort01f"/>
+                                    <PropertyValue Property="Value" Path="landxf"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="land1f"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="statef_name"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="statef"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ort01f"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="strasf"/>
@@ -243,6 +279,9 @@
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="is_driver"/>
                                 </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="tick_tractor"/>
+                                </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -253,6 +292,9 @@
                             <Collection>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="educ_type_numc"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="academic_degree_id"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
@@ -273,9 +315,6 @@
                     <Record>
                         <PropertyValue Property="Data">
                             <Collection>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="pernr"/>
-                                </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="nachn"/>
                                 </Record>
@@ -347,6 +386,18 @@
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="min_salary"/>
                                 </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="business_trip"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="cand_relocate"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="business_trip_sever_id"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="business_trip_id"/>
+                                </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -369,6 +420,9 @@
                     <Record>
                         <PropertyValue Property="Data">
                             <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="pernr"/>
+                                </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="objid"/>
                                 </Record>
@@ -425,16 +479,22 @@
                 </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="pernr"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Refresh"/>
+                            <PropertyValue Property="Action" String="">
+                                <Annotation Term="Core.Messages">
+                                    <Collection>
+                                        <Record>
+                                            <PropertyValue Property="message" String="ERROR: Mandatory Value for Action not found"/>
+                                            <PropertyValue Property="severity" String="error"/>
+                                        </Record>
+                                    </Collection>
+                                </Annotation>
+                            </PropertyValue>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="nachn"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="name2"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                         <Record Type="UI.DataField">
@@ -523,7 +583,14 @@
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_EDUC_TYPE_VHType">
-                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_FACTORY_VHType/ID">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_FACTORY_VHType">
+                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATE_REGS_CDS.ZHR_I_FAMILY_STAT_VHType/id">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>

@@ -5,12 +5,11 @@
     <App id='id1'>
         <Page id="page" floatingFooter="true" showHeader="false" title="Example how to use OData V2 Edm.DateTime in SAPUI5 applications">
             <VBox id='id2' width="100%">
-                <form:SimpleForm id='id30' class="sapUiResponsiveMargin" columnsM="1" labelSpanL="1" layout="ResponsiveLayout" width="auto">
-                    <form:content>
-                        <Text id="_IDGenText10" class="text_reg" text="Если у вас уже есть учетная запись, пожалуйста, выполните вход " />
-                        <Button id="BadgedButton1" class="but_line" text="Войти" width="30%" icon="sap-icon://action" type="Attention" press="onSapLogonPress"></Button>
-                    </form:content>
-                </form:SimpleForm>
+
+                <VBox id='id33' width="90%" justifyContent="End" class="sapUiSmallMarginEnd" direction="Column" alignItems="End">
+                    <Text id="_IDGenText10" text="Войдите, если у вас уже есть учетная запись " width="100%"/>
+                    <Button id="BadgedButton1" text="Войти" width="100%" icon="sap-icon://action" type="Attention" press="onSapLogonPress"></Button>
+                </VBox>
                 <form:SimpleForm id='id3' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ResponsiveGridLayout" width="auto">
                     <form:content>
                         <Label id='com1' text="" />
@@ -24,19 +23,26 @@
                         <Label id='lab10' text="" />
                         <Text id='txt10' text="ФИО" textAlign="Begin" class="TextStyle" />
                         <Label id='lab1' text="Имя" />
-                        <Input id='vorna' value=" " />
+                        <Input id='vorna' value=" "   width = "60%" />
                         <Label id='lab2' text="Отчество" />
-                        <Input id='nachn2' value=" " />
+                        <Input id='nachn2' value=" "   width = "60%"/>
                         <Label id='lab3' text="Фамилия" required="true"/>
-                        <Input id='nachn' value=" " />
+                        <Input id='nachn' value=" "   width = "60%"/>
                         <Label id='lab4' text="Табельный номер" />
-                        <Input id='tabel' value="00000000" />
+                        <Input id='tabel' value="00000000"   width = "30%" />
                         <Label id='lab6' text="" />
                         <Text id='txt1' text="{i18n>pernr}" />
                         <Label id='lab7' text="" />
                         <Text id='txt2' text="{i18n>text1}" />
                         <Label id='lab8' text="" />
                         <Text id='txt3' text="{i18n>text3}" />
+                        <Label id='lab88' text="" />
+
+                        <Input id='factory' showValueHelp="true" valueHelpRequest=".onValueHelpRequest" value=""/>
+                        <Input id='factoryid' showValueHelp="true" valueHelpRequest=".onValueHelpRequest" value="" visible="false" />
+                        <Label id='lab888' text="" />
+                        <Text id='txt99' text="{i18n>factory}" />
+                        <Label id='lab99' text="" />
                     </form:content>
                 </form:SimpleForm>
                 <form:SimpleForm id='id4' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ColumnLayout" width="auto">
@@ -44,19 +50,19 @@
                         <Label id='lab11' text="" />
                         <Text id='txt4' text="{i18n>data_pers}" textAlign="Begin" class="TextStyle" />
                         <Label id='lab9' text="{i18n>text5}" required="true"/>
-                        <Input id='login' value="" />
+                        <Input id='login' value=""  width = "60%"/>
                         <Label id='lab12' text=" "/>
                         <Text id='txt12' text="{i18n>text6}" textAlign="Begin" class="col" />
                         <Label id='lab13' text="{i18n>password}" required="true"/>
-                        <Input id='password' value="" />
+                        <Input id='password' value=""  width = "60%"/>
                         <Label id='lab14' text="{i18n>repeat_password}" required="true"/>
-                        <Input id='repeat_password' value="" />
+                        <Input id='repeat_password' value=""  width = "60%"/>
                         <Label id='lab15' text="{i18n>mail}" required="true"/>
-                        <Input id='mail' value="" />
+                        <Input id='mail' value=""  width = "60%"/>
                         <Label id='lab16' text=" "/>
                         <Text id='txt16' text="{i18n>help_mail}" textAlign="Begin" class="col" />
                         <Label id='lab17' text="{i18n>repeat_mail}" required="true"/>
-                        <Input id='repeat_mail' value="" />
+                        <Input id='repeat_mail' value=""  width = "60%"/>
                     </form:content>
                 </form:SimpleForm>
                 <form:SimpleForm id='fid4' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ResponsiveGridLayout" width="auto">

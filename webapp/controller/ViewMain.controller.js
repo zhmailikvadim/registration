@@ -1,11 +1,13 @@
 sap.ui.define(
-  ['sap/ui/core/mvc/Controller', 'sap/m/MessageBox', 'sap/m/MessageToast'],
+  ['sap/ui/core/mvc/Controller', 'sap/m/MessageBox', 'sap/m/MessageToast','../controller/CreateValueHelpConfig'],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
    */
-  function (Controller, MessageBox, MessageToast) {
+  function (Controller,	MessageBox,	MessageToast,	ValueHelpConfig ) {
     'use strict';
     let candidateEntity = '/ZHR_C_CANDIDATE_REGS';
+    let eEducTypeVH = '/ZHR_I_EDUC_TYPE_VH';
+    let factoryVH = '/ZHR_I_FACTORY_VH';
     let logEntity = '/zhr_c_recruitment_log';
     return Controller.extend('registration.controller.ViewMain', {
       onInit: function () {
@@ -34,8 +36,7 @@ sap.ui.define(
               },
             });
           } else {
-            window.open(
-              'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/?sap-client=400&sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage',
+            window.open( 'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/?sap-client=400&sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage',
               '_blank',
             );
             MessageBox.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
@@ -60,8 +61,7 @@ sap.ui.define(
       },
 
       onSapLogonPress: function () {
-        var new_window = window.open(
-          'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/?sap-client=400&sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage',
+        var new_window = window.open( 'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/?sap-client=400&sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage',
           '_blank',
         );
         new_window.onload = function () {
@@ -145,6 +145,40 @@ sap.ui.define(
           this.getView().getModel('viewModel').setProperty('/bEnableUpdate', false);
         }
       },
+      onValueHelpRequest: async function (oEvent) {       
+        var pageModel = this.getView().getModel("viewModel");
+        var view =  this.getView();
+        this.getView().getModel().read( factoryVH, {
+          //filters: filters,
+          success: function(data, response) {console.log(data)
+          },
+          error: (oError) => MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' }),
+        });
+
+        if (!this._valueHelpDialog) {
+            this._valueHelpDialog = await ValueHelpConfig.createValueHelp({
+                title: "Предприятия",
+                model: this.getView().getModel(),
+                multiSelect: false,
+                keyField: "ID",
+                keyDescField: "Description",
+                basePath: factoryVH,
+                columns: [
+                    {
+                        label: "Название", path: "Description"
+                    }
+                ],
+                ok: function (selectedRow) {
+                    //pageModel.setProperty("factory", selectedRow.ID);
+                    view.byId( "factory").setValue(selectedRow.Description);
+                    view.byId( "factoryid").setValue(selectedRow.Description);
+                    view.byId('tabel').setValue(99999999);
+                }
+            });
+            this.getView().addDependent(this._valueHelpDialog);
+        }
+        this._valueHelpDialog.open();
+    }
     });
   },
 );
