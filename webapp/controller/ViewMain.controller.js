@@ -39,6 +39,7 @@ sap.ui.define(
         var mail = this.getView().byId('mail').getValue();
         var repeat_mail = this.getView().byId('repeat_mail').getValue();
 
+
         if (password != repeat_password) {
           alert('Пароли не совпадают');
           return;
@@ -114,7 +115,7 @@ sap.ui.define(
         });
       },
       onCheckErrors: function (oData) {
-        var ErrorUnexpected = 'Не удалось отправить, повторите пожалуйста отправку формы!'
+        var ErrorUnexpected = 'Не удалось отправить, повторите пожалуйста отправку формы!';
         if (oData.results.length > 0) {
           if (oData.results[0].has_errors == true) {
             let oModelLog = this.getView().getModel();
@@ -138,10 +139,9 @@ sap.ui.define(
               );
               MessageBox.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
               return;
-            }
-            else MessageBox.error(ErrorUnexpected);
+            } else MessageBox.error(ErrorUnexpected);
           }
-        } else  MessageBox.error(ErrorUnexpected);
+        } else MessageBox.error(ErrorUnexpected);
       },
 
       onCheckBoxSuccessSelect: function (oEvent) {
@@ -190,6 +190,14 @@ sap.ui.define(
           this.getView().addDependent(this._valueHelpDialog);
         }
         this._valueHelpDialog.open();
+      },
+      isValidPhone(phoneNumber) {
+        var found = phoneNumber.search(/^[\+]?[0-9]{0,3}\W?+[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/);
+        if (found > -1) {
+          return true;
+        } else {
+          return false;
+        }
       },
     });
   },
