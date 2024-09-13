@@ -38,8 +38,8 @@
                         <Text id='txt3' text="{i18n>text3}" />
                         <Label id='lab88' text="" />
 
-                        <Input id='factory' showValueHelp="true" valueHelpRequest=".onValueHelpRequest" value=""/>
-                        <Input id='factoryid' showValueHelp="true" valueHelpRequest=".onValueHelpRequest" value="" visible="false" />
+                        <Input id='factory' showValueHelp="true" valueHelpRequest=".onInputFactoryValueHelpRequest" />
+                        <Input id='factoryid' showValueHelp="true" binding = "{/ZHR_C_CANDIDATE_REGS}" value = "{/factory_numc}" visible="false" />
                         <Label id='lab888' text="" />
                         <Text id='txt99' text="{i18n>factory}" />
                         <Label id='lab99' text="" />
@@ -78,9 +78,9 @@
                         <Label id='lab24' text="" />
                         <Text id='txt24' text="{i18n>garant}" textAlign="Begin" />
                         <Label id='lab25' text="" />
-                        <CheckBox id='ch1' text="{i18n>check}" select="onParentClicked" />
+                        <CheckBox id='ch1' text="{i18n>check}" select="onCheckBoxSuccessSelect" />
                         <Label id='lab26' text="" />
-                        <Button id="BadgedButton" text="Зарегистрировать" class="but_regis" width="50%" enabled="{viewModel>/bEnableUpdate}" press="onButtonPress"></Button>
+                        <Button id="idBadgedButton" text="Зарегистрировать" class="but_regis" width="50%" enabled="{viewModel>/bEnableUpdate}" press="onButtonRegistrationPress"></Button>
                     </form:content>
                 </form:SimpleForm>
             </VBox>
