@@ -6,7 +6,7 @@
         <Page id="page" floatingFooter="true" showHeader="false" title="Example how to use OData V2 Edm.DateTime in SAPUI5 applications">
             <VBox id='id2' width="100%">
 
-                <VBox id='id33' width="90%" justifyContent="End" class="sapUiSmallMarginEnd" direction="Column" alignItems="End">
+                <VBox id='id33' width="80%"  class="sapUiSmallMarginEnd" direction="Column" alignItems="End">
                     <Text id="_IDGenText10" text="Войдите, если у вас уже есть учетная запись " width="100%"/>
                     <Button id="BadgedButton1" text="Войти" width="100%" icon="sap-icon://action" type="Attention" press="onSapLogonPress"></Button>
                 </VBox>
