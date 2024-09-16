@@ -17,7 +17,8 @@ sap.ui.define([
     "sap/f/DynamicPageHeader",
     "sap/m/Dialog",
     "sap/ui/table/Table",
-    "sap/ui/table/Column"
+    "sap/ui/table/Column",
+    "sap/m/SearchField"
 ],
 /**
  * provide app-view type models (as in the first "V" in MVVC)
@@ -32,7 +33,7 @@ function (JSONModel, Device,
           FilterField, Filter, FilterOperator,
           uid, ValueHelpDialog, Button,
           SmartFilterBar, SmartTable, CustomData,
-          FlexItemData, DynamicPage, DynamicPageHeader, Dialog, Table, Column) {
+          FlexItemData, DynamicPage, DynamicPageHeader, Dialog, Table, Column, SearchField) {
     "use strict";
 
     ValueHelpDialog.prototype.cgAddFilters = function (filters) {
@@ -96,7 +97,17 @@ function (JSONModel, Device,
                 filterBar: new FilterBar({
                     isRunningInValueHelpDialog: false,
                     advancedMode: true,
-                    filterBarExpanded: true,
+                    filterBarExpanded: false,
+                    basicSearch:new SearchField({search: function(oEvent) {
+                        var oBinding = dialog.getTable().getBinding();
+                        var sQuery = oEvent.getParameter("query");
+                        var aFilter1 = [
+                          new Filter(config.keyDescField, sap.ui.model.FilterOperator.Contains, sQuery)
+                        ];
+                        var allFilter = new Filter(aFilter1 , false);
+                        oBinding.filter(allFilter);
+                      }}),
+
                     filterGroupItems: filterGroupItems,
                     search: function (oEvent) {
                         var oBinding = dialog.getTable().getBinding();

@@ -181,24 +181,22 @@ sap.ui.define(
               },
             ],
             ok: function (selectedRow) {
-              //pageModel.setProperty("/factory_numc", selectedRow.ID);
               view.byId('factory').setValue(selectedRow.Description);
               view.byId('factoryid').setValue(selectedRow.ID);
-              ///view.byId('tabel').setValue(99999999);
             },
           });
           this.getView().addDependent(this._valueHelpDialog);
         }
         this._valueHelpDialog.open();
       },
-      isValidPhone(phoneNumber) {
+     /* isValidPhone(phoneNumber) {
         var found = phoneNumber.search(/^[\+]?[0-9]{0,3}\W?+[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/);
         if (found > -1) {
           return true;
         } else {
           return false;
         }
-      },
+      },*/
     });
   },
 );
