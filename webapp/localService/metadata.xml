@@ -351,7 +351,7 @@
                     <PropertyRef Name="ID"/>
                 </Key>
                 <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:text="Description" sap:label="Вид образования"/>
-                <Property Name="Description" Type="Edm.String" MaxLength="25" sap:label="Название предприятия" sap:quickinfo="Название балансовой единицы или фирмы"/>
+                <Property Name="Description" Type="Edm.String" MaxLength="80" sap:label="Название предприятия" sap:quickinfo="Наименование организации для заявки на поиск"/>
             </EntityType>
             <EntityType Name="ZHR_I_FAMILY_STAT_VHType" sap:label="Семейное положение" sap:content-version="1">
                 <Key>
