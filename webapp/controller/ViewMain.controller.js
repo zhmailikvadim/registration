@@ -90,13 +90,11 @@ sap.ui.define(
         oModel.submitChanges({
           success: this.onSuccessRecordAdded.bind(this),
           error: () => {
-          error: () => {
             // MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' });
             oView.setBusy(false);
           },
         });
       },
-
       onSuccessRecordAdded: function () {
         let oModel = this.getView().getModel();
         let oView = this.getView();
@@ -124,7 +122,7 @@ sap.ui.define(
               filters: filters1,
               urlParameters: { $expand: 'to_RecruitmentLog' },
               success: function (data, response) {
-                  MessageBox.error(data.results[0].to_RecruitmentLog.results[0].message + data.results[0].to_RecruitmentLog.results[0].message_v4);
+                MessageBox.error(data.results[0].to_RecruitmentLog.results[0].message + data.results[0].to_RecruitmentLog.results[0].message_v4);
               },
             });
           } else {
