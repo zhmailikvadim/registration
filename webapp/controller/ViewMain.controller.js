@@ -6,9 +6,7 @@ sap.ui.define(
   function (Controller, MessageBox, MessageToast, ValueHelpConfig) {
     'use strict';
     let candidateEntity = '/ZHR_C_CANDIDATE_REGS';
-    let eEducTypeVH = '/ZHR_I_EDUC_TYPE_VH';
     let factoryVH = '/ZHR_I_FACTORY_VH';
-    let logEntity = 'to_RecruitmentLog';
     return Controller.extend('registration.controller.ViewMain', {
       onInit: function () {
         var viewProperties = {
@@ -38,7 +36,6 @@ sap.ui.define(
         var repeat_password = this.getView().byId('repeat_password').getValue();
         var mail = this.getView().byId('mail').getValue();
         var repeat_mail = this.getView().byId('repeat_mail').getValue();
-
 
         if (password != repeat_password) {
           alert('Пароли не совпадают');
@@ -92,7 +89,7 @@ sap.ui.define(
         });
         oModel.submitChanges({
           success: this.onSuccessRecordAdded.bind(this),
-          error: (oError) => {
+          error: () => {
             // MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' });
             oView.setBusy(false);
           },
@@ -126,8 +123,6 @@ sap.ui.define(
               filters: filters1,
               urlParameters: { $expand: 'to_RecruitmentLog' },
               success: function (data, response) {
-                console.log(response),
-                  console.log(data),
                   MessageBox.error(data.results[0].to_RecruitmentLog.results[0].message + data.results[0].to_RecruitmentLog.results[0].message_v4);
               },
             });
@@ -153,18 +148,17 @@ sap.ui.define(
         }
       },
 
-      onInputFactoryValueHelpRequest: async function (oEvent) {
-        var pageModel = this.getView().getModel();
+      onInputFactoryValueHelpRequest: async function () {
         var view = this.getView();
         this.getView()
           .getModel()
           .read(factoryVH, {
             //filters: filters,
-            success: function (data, response) {
+            success: function (data) {
               console.log(data);
             },
             error: (oError) => MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' }),
-          });
+          });*/
 
         if (!this._valueHelpDialog) {
           this._valueHelpDialog = await ValueHelpConfig.createValueHelp({
@@ -189,14 +183,6 @@ sap.ui.define(
         }
         this._valueHelpDialog.open();
       },
-     /* isValidPhone(phoneNumber) {
-        var found = phoneNumber.search(/^[\+]?[0-9]{0,3}\W?+[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/);
-        if (found > -1) {
-          return true;
-        } else {
-          return false;
-        }
-      },*/
     });
   },
 );
