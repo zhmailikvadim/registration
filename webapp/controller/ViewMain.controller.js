@@ -150,7 +150,7 @@ sap.ui.define(
 
       onInputFactoryValueHelpRequest: async function () {
         var view = this.getView();
-        this.getView()
+        /*this.getView()
           .getModel()
           .read(factoryVH, {
             //filters: filters,
