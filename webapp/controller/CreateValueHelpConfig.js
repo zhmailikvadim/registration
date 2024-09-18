@@ -186,9 +186,6 @@ sap.ui.define(
 
         // Create a Table to display the data
         var oTable = await dialog.getTableAsync();
-        // console.log(oTable);
-
-        //oTable.sort("Description",  TableSortOrder.Ascending );
         oTable.setModel(config.model);
         if (oTable.bindRows) {
           for (let colDef of config.columns) {
