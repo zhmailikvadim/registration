@@ -90,6 +90,7 @@ sap.ui.define(
         oModel.submitChanges({
           success: this.onSuccessRecordAdded.bind(this),
           error: () => {
+          error: () => {
             // MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' });
             oView.setBusy(false);
           },
@@ -154,6 +155,7 @@ sap.ui.define(
           .getModel()
           .read(factoryVH, {
             //filters: filters,
+            success: function (data) {
             success: function (data) {
               console.log(data);
             },
