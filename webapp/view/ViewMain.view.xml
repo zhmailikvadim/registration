@@ -13,21 +13,33 @@
                 <form:SimpleForm id='id3' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ResponsiveGridLayout" width="auto">
                     <form:content>
                         <Label id='com1' text="" />
-                        <Text id='tom1' text="{i18n>com1}" textAlign="Begin" />
-                        <Label id='com2' text="" />
+                    
                         <Text id='tom2' text="{i18n>com2}" textAlign="Begin" />
                         <Label id='com3' text="" />
+
+                    <VBox id='id38' width="80%"   direction="Column" alignItems="Start">
                         <Text id='tom3' text="{i18n>com3}" textAlign="Begin" />
+                         <Link id='link2' text="https://hr.belorusneft.bv/career " href="https://hr.belorusneft.bv/career"/>
+                         
+                          <Text id='tom6' text="{i18n>com6}" textAlign="Begin" />
+                    </VBox>
+
                         <Label id='com4' text="" />
                         <Text id='tom4' text="{i18n>com4}" textAlign="Begin" />
+                       
                         <Label id='lab10' text="" />
+                      
+                       
+                     
+                       
                         <Text id='txt10' text="ФИО" textAlign="Begin" class="TextStyle" />
-                        <Label id='lab1' text="Имя" />
-                        <Input id='vorna' value=" "   width = "60%" />
-                        <Label id='lab2' text="Отчество" />
-                        <Input id='nachn2' value=" "   width = "60%"/>
                         <Label id='lab3' text="Фамилия" required="true"/>
-                        <Input id='nachn' value=" "   width = "60%"/>
+                        <Input id='nachn' width = "60%"/>
+                        <Label id='lab1' text="Имя" required="true"/>
+                        <Input id='vorna'  width = "60%" />
+                        <Label id='lab2' text="Отчество" />
+                        <Input id='nachn2'  width = "60%"/>
+                        
                         <Label id='lab4' text="Табельный номер" />
                         <Input id='tabel' value="00000000"   width = "30%" />
                         <Label id='lab6' text="" />

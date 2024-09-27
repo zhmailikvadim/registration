@@ -36,6 +36,7 @@ sap.ui.define(
         var repeat_password = this.getView().byId('repeat_password').getValue();
         var mail = this.getView().byId('mail').getValue();
         var repeat_mail = this.getView().byId('repeat_mail').getValue();
+        var vorna = this.getView().byId('vorna').getValue();
 
         if (password != repeat_password) {
           alert('Пароли не совпадают');
@@ -47,7 +48,7 @@ sap.ui.define(
           return;
         }
 
-        if (nachn == '' || login == '' || password == '' || repeat_password == '' || mail == '' || repeat_mail == '') {
+        if (nachn == '' || login == '' || password == '' || repeat_password == '' || mail == '' || repeat_mail == '' || vorna == '') {
           alert('Заполните обязательные поля');
           return;
         }
