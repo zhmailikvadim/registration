@@ -16,8 +16,9 @@
                         <Label id='com3' text="" />
                         <Text id='tom3' text="{i18n>com3}"/>
                         <Link id='link2' text="https://hr.belorusneft.by/career " href="https://hr.belorusneft.by/career" target = "_blank" />
-                        <Label id='com43' text="" />
+                        <Label id='com43' text="" /> 
                         <Text id='tom64' text="{i18n>com6}" />
+                        
                         <Label id='com4' text="" />
                         <Text id='tom4' text="{i18n>com4}" textAlign="Begin" />
                         <Label id='lab10' text="" />
