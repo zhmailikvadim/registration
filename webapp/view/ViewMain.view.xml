@@ -13,7 +13,6 @@
                 <form:SimpleForm id='id3' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ResponsiveGridLayout" width="auto">
                     <form:content>
                         <Label id='com1' text="" />
-
                         <Text id='tom2' text="{i18n>com2}" textAlign="Begin" />
                         <Label id='com3' text="" />
 
