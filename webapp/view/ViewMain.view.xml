@@ -7,26 +7,19 @@
             <VBox id='id2' width="100%">
 
                 <VBox id='id33' width="80%" class="sapUiSmallMarginEnd" direction="Column" alignItems="End">
-                    <Text id="_IDGenText10" text="Войдите, если у вас уже есть учетная запись " width="100%"/>
-                    <Button id="BadgedButton1" text="Войти" width="100%" icon="sap-icon://action" type="Attention" press="onSapLogonPress"></Button>
+                    <Button id="BadgedButton1" text="Войдите, если у вас уже есть учетная запись" width="100%" icon="sap-icon://action" type="Attention" press="onSapLogonPress"></Button>
                 </VBox>
                 <form:SimpleForm id='id3' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ResponsiveGridLayout" width="auto">
                     <form:content>
                         <Label id='com1' text="" />
                         <Text id='tom2' text="{i18n>com2}" textAlign="Begin" />
                         <Label id='com3' text="" />
-                        <VBox id='id38' width="100%" direction="Row" justifyContent="Start">
-                            <Text id='tom3' text="{i18n>com3}"/>
-                            <Link id='link2' text="https://hr.belorusneft.bv/career " href="https://hr.belorusneft.bv/career"/>
-                        </VBox>
+                        <Text id='tom3' text="{i18n>com3}"/>
+                        <Link id='link2' text="https://hr.belorusneft.by/career " href="https://hr.belorusneft.by/career" target = "_blank" />
                         <Label id='com43' text="" />
-
-                        <Text id='tom64' text="{i18n>com6}" textAlign="Begin" width="100%" />
-
-
+                        <Text id='tom64' text="{i18n>com6}" />
                         <Label id='com4' text="" />
                         <Text id='tom4' text="{i18n>com4}" textAlign="Begin" />
-
                         <Label id='lab10' text="" />
                         <Text id='txt10' text="ФИО" textAlign="Begin" class="TextStyle" />
                         <Label id='lab3' text="Фамилия" required="true"/>
@@ -82,7 +75,7 @@
                         <Label id='lab22' text="" />
                         <Text id='txt22' text="{i18n>comment}" textAlign="Begin" class="col" />
                         <Label id='lab23' text="" />
-                        <Link id='link1' text="{i18n>agree}" href="https://belsap.com/sogl.pdf"/>
+                        <Link id='link1' text="{i18n>agree}" href="https://belsap.com/sogl.pdf" target = "_blank"/>
                         <Label id='lab24' text="" />
                         <Text id='txt24' text="{i18n>garant}" textAlign="Begin" />
                         <Label id='lab25' text="" />
