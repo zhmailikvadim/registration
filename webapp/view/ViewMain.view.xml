@@ -15,7 +15,6 @@
                         <Label id='com1' text="" />
                         <Text id='tom2' text="{i18n>com2}" textAlign="Begin" />
                         <Label id='com3' text="" />
-
                         <VBox id='id38' width="100%" direction="Row" justifyContent="Start">
                             <Text id='tom3' text="{i18n>com3}"/>
                             <Link id='link2' text="https://hr.belorusneft.bv/career " href="https://hr.belorusneft.bv/career"/>
