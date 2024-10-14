@@ -161,7 +161,7 @@ sap.ui.define(
             error: (oError) => MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' }),
           });*/
 
-        if (!this._valueHelpDialog) {
+        //if (!this._valueHelpDialog) {
           this._valueHelpDialog = await ValueHelpConfig.createValueHelp({
             title: 'Предприятия',
             model: this.getView().getModel(),
@@ -181,7 +181,7 @@ sap.ui.define(
             },
           });
           this.getView().addDependent(this._valueHelpDialog);
-        }
+        //}
         this._valueHelpDialog.open();
       },
     });

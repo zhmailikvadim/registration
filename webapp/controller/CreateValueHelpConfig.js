@@ -121,7 +121,7 @@ sap.ui.define(
             filterBarExpanded: false,
             basicSearch: new SearchField({
               search: function (oEvent) {
-                var oBinding = dialog.getTable().getBinding();
+                var oBinding = (dialog.getTable().getBinding())?dialog.getTable().getBinding():dialog.getTable().getBinding("items");
                 var sQuery = oEvent.getParameter('query');
                 var aFilter1 = [new Filter(config.keyDescField, sap.ui.model.FilterOperator.Contains, sQuery)];
                 var allFilter = new Filter(aFilter1, false);
@@ -131,7 +131,7 @@ sap.ui.define(
 
             filterGroupItems: filterGroupItems,
             search: function (oEvent) {
-              var oBinding = dialog.getTable().getBinding();
+              var oBinding = (dialog.getTable().getBinding())?dialog.getTable().getBinding():dialog.getTable().getBinding("items");
               const filter = [];
               for (let columnId in dialogMetadata.columns) {
                 let conditions = dialogMetadata.columns[columnId].filterValues;
@@ -149,7 +149,7 @@ sap.ui.define(
                   }),
                 );
               } else {
-                oBinding.filter();
+                //oBinding.filter();
               }
             },
           }),
@@ -210,8 +210,12 @@ sap.ui.define(
           dialog.cgAddFilters(config.preFilters);
         }
 
-        oTable.getBinding().sort(new ModelSorter('Description', 0 ));
+        if (oTable.getBinding()){
 
+        oTable.getBinding().sort(new ModelSorter('Description', 0 ));
+      }else{
+        dialog.getTable().getBinding("items").sort(new ModelSorter('Description', 0 ));
+      }
         dialog.update();
         return dialog;
       },
