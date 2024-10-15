@@ -16,17 +16,19 @@ sap.ui.define(
         var viewModel = new sap.ui.model.json.JSONModel(viewProperties);
         this.getView().setModel(viewModel, 'viewModel');
       },
-      onNavigateRecruitmentLogon: function (oEvent) {
+      onNavigateRecruitmentLogon: function (preferredMode) {
         var hRefRecruitment = window.location.href;
         if (window.location.href.indexOf('localhost') < 1) {
           hRefRecruitment = window.location.href.replace(
             'sap/zhr_cand_regis/index.html',
-            'ui2/ushell/shells/abap/?sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage',
+            `ui2/ushell/shells/abap/?sap-language=ru/FioriLaunchpad.html${preferredMode}&`,
           );
         } else {
           hRefRecruitment =
             'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/?sap-client=400&sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage';
         }
+        
+        hRefRecruitment = hRefRecruitment.replace('&?','?');
         var new_window = window.open(hRefRecruitment, '_blank');
 
         var View = this.getView();
@@ -39,7 +41,7 @@ sap.ui.define(
       },
 
       onSapLogonPress: function (oEvent) {
-        this.onNavigateRecruitmentLogon();
+        this.onNavigateRecruitmentLogon('#zhr_anketa_sem-manage');
       },
 
       onButtonRegistrationPress: function () {
@@ -141,7 +143,7 @@ sap.ui.define(
             });
           } else {
             if (oData.results[0].zsap_user > '') {
-              this.onNavigateRecruitmentLogon();
+              this.onNavigateRecruitmentLogon('#zhr_anketa_sem-manage?preferredMode=create&');
               MessageBox.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
               return;
             } else MessageBox.error(ErrorUnexpected);
