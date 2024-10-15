@@ -15,8 +15,16 @@ sap.ui.define(
 
         var viewModel = new sap.ui.model.json.JSONModel(viewProperties);
         this.getView().setModel(viewModel, 'viewModel');
+        document.cookie.replace(
+          /(?<=^|;).+?(?=\=|;|$)/g,
+          name => location.hostname
+            .split(/\.(?=[^\.]+\.)/)
+            .reduceRight((acc, val, i, arr) => i ? arr[i]='.'+val+acc : (arr[i]='', arr), '')
+            .map(domain => document.cookie=`${name}=;max-age=0;path=/;domain=${domain}`)
+        );
       },
       onNavigateRecruitmentLogon: function (preferredMode) {
+
         var hRefRecruitment = window.location.href;
         if (window.location.href.indexOf('localhost') < 1) {
           hRefRecruitment = window.location.href.replace(
