@@ -16,17 +16,30 @@ sap.ui.define(
         var viewModel = new sap.ui.model.json.JSONModel(viewProperties);
         this.getView().setModel(viewModel, 'viewModel');
       },
+      onNavigateRecruitmentLogon: function (oEvent) {
+        var hRefRecruitment = window.location.href;
+        if (window.location.href.indexOf('localhost') < 1) {
+          hRefRecruitment = window.location.href.replace(
+            'sap/zhr_cand_regis/index.html',
+            'ui2/ushell/shells/abap/?sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage',
+          );
+        } else {
+          hRefRecruitment =
+            'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/?sap-client=400&sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage';
+        }
+        var new_window = window.open(hRefRecruitment, '_blank');
 
-      onSapLogonPress: function () {
-        var new_window = window.open(
-          'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/?sap-client=400&sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage',
-          '_blank',
-        );
+        var View = this.getView();
         new_window.onload = function () {
-          new_window.document.getElementById('USERNAME_FIELD-inner').value = '111111';
-          const inputElement = new_window.document.querySelector('#USERNAME_FIELD-inner');
-          inputElement.value = '111111';
+          const inputLogin = new_window.document.querySelector('#USERNAME_FIELD-inner');
+          inputLogin.value = View.byId('login').getValue();
+          const inputPassword = new_window.document.querySelector('#PASSWORD_FIELD-inner');
+          inputPassword.value = View.byId('password').getValue();
         };
+      },
+
+      onSapLogonPress: function (oEvent) {
+        this.onNavigateRecruitmentLogon();
       },
 
       onButtonRegistrationPress: function () {
@@ -59,7 +72,7 @@ sap.ui.define(
         filters.push(new sap.ui.model.Filter('has_errors', sap.ui.model.FilterOperator.EQ, 'false'));
         filters.push(new sap.ui.model.Filter('num01_email', sap.ui.model.FilterOperator.EQ, mail));
 
-        //Read for checking e-mail
+        //Read to checking e-mail
         oModel.read(candidateEntity, {
           filters: filters,
           success: this.onReadEmailSuccess.bind(this),
@@ -128,10 +141,7 @@ sap.ui.define(
             });
           } else {
             if (oData.results[0].zsap_user > '') {
-              window.open(
-                'https://sapbpc-dev.beloil.by/sap/bc/ui5_ui5/ui2/ushell/shells/abap/?sap-client=400&sap-language=ru/FioriLaunchpad.html#zhr_anketa_sem-manage',
-                '_blank',
-              );
+              this.onNavigateRecruitmentLogon();
               MessageBox.show('Анкета отправлена. \r\n Спасибо за регистрацию!');
               return;
             } else MessageBox.error(ErrorUnexpected);
@@ -150,38 +160,25 @@ sap.ui.define(
 
       onInputFactoryValueHelpRequest: async function () {
         var view = this.getView();
-        /*this.getView()
-          .getModel()
-          .read(factoryVH, {
-            //filters: filters,
-            success: function (data) {
-            success: function (data) {
-              console.log(data);
+        this._valueHelpDialog = await ValueHelpConfig.createValueHelp({
+          title: 'Предприятия',
+          model: this.getView().getModel(),
+          multiSelect: false,
+          keyField: 'ID',
+          keyDescField: 'Description',
+          basePath: factoryVH,
+          columns: [
+            {
+              label: 'Название',
+              path: 'Description',
             },
-            error: (oError) => MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' }),
-          });*/
-
-        //if (!this._valueHelpDialog) {
-          this._valueHelpDialog = await ValueHelpConfig.createValueHelp({
-            title: 'Предприятия',
-            model: this.getView().getModel(),
-            multiSelect: false,
-            keyField: 'ID',
-            keyDescField: 'Description',
-            basePath: factoryVH,
-            columns: [
-              {
-                label: 'Название',
-                path: 'Description',
-              },
-            ],
-            ok: function (selectedRow) {
-              view.byId('factory').setValue(selectedRow.Description);
-              view.byId('factoryid').setValue(selectedRow.ID);
-            },
-          });
-          this.getView().addDependent(this._valueHelpDialog);
-        //}
+          ],
+          ok: function (selectedRow) {
+            view.byId('factory').setValue(selectedRow.Description);
+            view.byId('factoryid').setValue(selectedRow.ID);
+          },
+        });
+        this.getView().addDependent(this._valueHelpDialog);
         this._valueHelpDialog.open();
       },
     });
