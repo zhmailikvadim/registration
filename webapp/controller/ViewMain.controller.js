@@ -48,8 +48,69 @@ sap.ui.define(
         };
       },
 
-      onSapLogonPress: function (oEvent) {
+      onButtonSapLogonPress: function (oEvent) {
         this.onNavigateRecruitmentLogon('#zhr_anketa_sem-manage');
+      },
+
+
+      onButtonForgotPasswordPress: function(){
+        var self = this;
+        var dialog = new sap.m.Dialog({
+          title: 'Введите адрес электронной почты',
+          type: 'Message',
+          content: [
+            new sap.m.Label({ text: 'e-mail', labelFor: 'event'}),
+            new sap.m.Input('event', {
+              liveChange: function(oEvent) {
+                var eventName = oEvent.getParameter('value');
+                var parent = oEvent.getSource().getParent();
+      
+                parent.getBeginButton().setEnabled(eventName.length > 0);
+              },
+              width: '100%',
+              placeholder: 'Add Text from Hashtag (required - do not include #)'
+            })
+          ],
+          beginButton: new sap.m.Button({
+            text: 'Отправить',
+            enabled: false,
+            press: function () {
+              this.SendCredentialsToEmail(oEvent),
+              dialog.close();
+            }
+          }),
+          endButton: new sap.m.Button({
+            text: 'Cancel',
+            press: function () {
+              dialog.close();
+            }
+          }),
+          afterClose: function() {
+            dialog.destroy();
+          }
+        });
+        dialog.open();	
+      },
+
+      SendCredentialsToEmail: function (oEvent) {
+        var oModel = this.getView().getModel();
+        var num01_email = this.getView().byId('mail').getValue();
+
+        oModel.callFunction(
+          "/A1B4310E282F01ASend_credentials_to_email", {
+              method: "POST",
+              urlParameters: {
+                num01_email: num01_email
+                },
+              success: function(oData, response) {
+                MessageBox.show('Логин и пароль отправлены на указанный e-mail, спасибо!');
+                },
+              error: function(oError) {
+                MessageBox.show('Ошибка отправки, проверьте пожалуйста адрес, спасибо!');
+
+                }
+            });
+
       },
 
       onButtonRegistrationPress: function () {
@@ -114,7 +175,7 @@ sap.ui.define(
         oModel.submitChanges({
           success: this.onSuccessRecordAdded.bind(this),
           error: () => {
-            // MessageBox.error(JSON.parse(oError.responseText).error.message.value, { title: 'Ошибка' });
+            MessageBox.error('Для повторной регистрации обновите страницу или нажмите F5');
             oView.setBusy(false);
           },
         });

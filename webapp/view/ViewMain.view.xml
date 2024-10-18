@@ -5,10 +5,10 @@
     <App id='id1'>
         <Page id="page" floatingFooter="true" showHeader="false" title="Example how to use OData V2 Edm.DateTime in SAPUI5 applications">
             <VBox id='id2' width="100%">
-
-                <VBox id='id33' width="80%" class="sapUiSmallMarginEnd" direction="Column" alignItems="End">
-                    <Button id="BadgedButton1" text="Войдите, если у вас уже есть учетная запись" width="100%" icon="sap-icon://action" type="Attention" press="onSapLogonPress"></Button>
-                </VBox>
+                <HBox id='id33' width="auto" class="sapUiResponsiveMargin" justifyContent="End" alignItems="End">
+                    <Button id="BadgedButton1" class="sapUiLargeMarginEnd" text="Войдите, если у вас уже есть учетная запись" width="100%" icon="sap-icon://action" type="Ghost" press="onButtonSapLogonPress"></Button>
+                    <Button id="BadgedButton2" class="sapUiLargeMarginEnd" text="Нажмите, если забыли пароль" width="100%" icon="sap-icon://action" type="Ghost" press="onButtonForgotPasswordPress"></Button>
+                </HBox>
                 <form:SimpleForm id='id3' class="sapUiResponsiveMargin" columnsL="1" columnsM="1" editable="true" labelSpanL="1" labelSpanM="1" layout="ResponsiveGridLayout" width="auto">
                     <form:content>
                         <Label id='com1' text="" />
